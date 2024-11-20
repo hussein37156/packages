@@ -1,0 +1,11 @@
+<launch>
+    <arg name="major" default="1.0"/>
+    <arg name="minor" default="1.0"/>
+    <arg name="omega" default="1.0"/>
+    <node pkg="turtlesim" type="turtlesim_node" name="sim"/>
+    <node pkg="lab_1" type="turtlesim_control.py" name="circle_script">
+        <param name="major" value="$(arg major)"/>
+        <param name="minor" value="$(arg minor)"/>
+        <param name="omega" value="$(arg omega)"/>
+    </node>
+</launch>
